@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/rPYIHQWgbX9xSXP8ZDff6MSCKMepYMh1LhOaCmT95c1GZnBsUcE7JKJAYhHZBZO34EexF1DHpn6yJ91yteDtg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\v-akams\\Development\\leetcodeDSA\\leetcodeDSAcs\\leetcodeDSAcs\\leetcodeDSAcs.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\v-akams\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\v-akams\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
