@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace leetcodeDSAcs
 {
+    // runtime: 76 ms, faster than 64.72%; memory: 21.7 MB, less than 69.98%
     public class Solution
     {
         public bool IsValid(string s)
