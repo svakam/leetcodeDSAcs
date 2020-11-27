@@ -2,3 +2,5 @@
 
 ## Easy
 ### Valid Parentheses
+### Valid SubArrays
+### Palindrome Number

@@ -15,40 +15,19 @@ namespace leetcodeDSAcs
                 return 0;
             }
             if (k == 0) return 0;
-            return GetNumOfSubArrays(0, nums.Length - 1, 1, 0, nums, k);
-            // iterate through the array for i elements
-            // if ith element is less than k, increment counter
-            // else move to next element
-            // do second iteration through array not including i for j elements
-            // if i * j < k, increment counter and do nth iteration through array not including the past elements
-            // else move to next element
-            // return counter
+            return GetNumOfSubArrays(0, 0, nums.Length - 1, 1, 0, nums, k);
+            // 
         }
 
-        public int GetNumOfSubArrays(int beginning, int end, int currentProduct, int numOfValidSubArrays, int[] nums, int k)
+        public int GetNumOfSubArrays(int current, int beginning, int end, int currentProduct, int numOfValidSubArrays, int[] nums, int k)
         {
-            if (beginning < nums.Length)
+            if (nums[current] < k)
             {
-                if (nums[position] < k)
-                {
-                    numOfValidSubArrays++;
-                    currentProduct = currentProduct * nums[position];
-                }
-                if (currentProduct < k)
-                {
-                    if (position != 0) numOfValidSubArrays++;
-                    return GetNumOfSubArrays(beginning + 1, end, currentProduct, numOfValidSubArrays, nums, k);
-                }
-                else
-                {
-                    return GetNumOfSubArrays(beginning, end, 1, numOfValidSubArrays, nums, k);
-                }
+                numOfValidSubArrays++;
+                currentProduct *= nums[beginning];
+                if 
             }
-            else
-            {
-
-                return numOfValidSubArrays;
-            }
+            GetNumOfSubArrays
         }
     }
 }
