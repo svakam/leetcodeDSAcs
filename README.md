@@ -2,5 +2,9 @@
 
 ## Easy
 ### Valid Parentheses
-### Valid SubArrays
 ### Palindrome Number
+### Roman To Integer
+### Reverse Integer
+
+## Medium
+### Valid SubArrays
