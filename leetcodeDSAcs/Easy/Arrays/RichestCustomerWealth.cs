@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace leetcodeDSAcs.Easy
+namespace leetcodeDSAcs.Easy.Arrays
 {
     // runtime: 100 ms, faster than 43.06%
     // memory: 25.4 mb, less than 88.63%

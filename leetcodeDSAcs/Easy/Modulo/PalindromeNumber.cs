@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace leetcodeDSAcs.Easy
+namespace leetcodeDSAcs.Easy.Modulo
 {
     // runtime 56 ms, faster than 91.84% C# subs
     // memory 17.3 mb, less than 29.61% subs
     public class PalindromeNumber
     {
+        // put digits into an array and read front->back and back-> front; if all match, return true, else false
         public bool IsPalindrome(int x)
         {
             if (x < 0) return false;

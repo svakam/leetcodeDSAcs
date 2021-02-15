@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace leetcodeDSAcs.Easy
+namespace leetcodeDSAcs.Easy.Modulo
 {
     // runtime: 40 ms, faster than 80.31% c# subs
     // space: 15.8 mb, less than 18.98% subs
@@ -21,7 +21,7 @@ namespace leetcodeDSAcs.Easy
                 x *= -1;
             }
 
-            // get number of digits
+            // get number of digits: take the log of the number, add 1, and round down
             int numDigits = (int)Math.Floor(Math.Log10(x) + 1);
 
             // start counter for power incrementation
@@ -36,7 +36,7 @@ namespace leetcodeDSAcs.Easy
                 {
                     checked
                     {
-                        newInt = newInt + (x % 10) * (int)Math.Pow(10, power);
+                        newInt += (x % 10) * (int)Math.Pow(10, power);
                     }
                 }
                 catch (OverflowException ex)

@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace leetcodeDSAcs.Easy
+namespace leetcodeDSAcs.Easy.Arrays
 {
     class KidsWithCandies
     {
+        // runtime: 236 ms, faster than 78.06%
+        // memory: 31.2 mb, less than 83.01%
         public IList<bool> GetGreatestCandiesOfEachKid(int[] candies, int extraCandies)
         {
             // initialize bool array of same length as candies array

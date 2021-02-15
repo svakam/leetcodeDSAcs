@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace leetcodeDSAcs.Easy
+namespace leetcodeDSAcs.Easy.Hashtables
 {
     // runtime: 76 ms, faster than 64.72%; memory: 21.7 MB, less than 69.98%
     public class ValidParentheses
