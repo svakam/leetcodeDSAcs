@@ -1,0 +1,16 @@
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\bin\Debug\netcoreapp3.1\RunConsole.exe
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\bin\Debug\netcoreapp3.1\RunConsole.deps.json
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\bin\Debug\netcoreapp3.1\RunConsole.runtimeconfig.json
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\bin\Debug\netcoreapp3.1\RunConsole.runtimeconfig.dev.json
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\bin\Debug\netcoreapp3.1\RunConsole.dll
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\bin\Debug\netcoreapp3.1\RunConsole.pdb
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\bin\Debug\netcoreapp3.1\leetcodeDSAcs.dll
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\bin\Debug\netcoreapp3.1\leetcodeDSAcs.pdb
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\obj\Debug\netcoreapp3.1\RunConsole.csprojAssemblyReference.cache
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\obj\Debug\netcoreapp3.1\RunConsole.AssemblyInfoInputs.cache
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\obj\Debug\netcoreapp3.1\RunConsole.AssemblyInfo.cs
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\obj\Debug\netcoreapp3.1\RunConsole.csproj.CoreCompileInputs.cache
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\obj\Debug\netcoreapp3.1\RunConsole.csproj.CopyComplete
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\obj\Debug\netcoreapp3.1\RunConsole.dll
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\obj\Debug\netcoreapp3.1\RunConsole.pdb
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\RunConsole\obj\Debug\netcoreapp3.1\RunConsole.genruntimeconfig.cache

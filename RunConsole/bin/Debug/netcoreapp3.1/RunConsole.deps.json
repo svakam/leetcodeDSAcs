@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "RunConsole/1.0.0": {
+        "dependencies": {
+          "leetcodeDSAcs": "1.0.0"
+        },
+        "runtime": {
+          "RunConsole.dll": {}
+        }
+      },
+      "leetcodeDSAcs/1.0.0": {
+        "runtime": {
+          "leetcodeDSAcs.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RunConsole/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "leetcodeDSAcs/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

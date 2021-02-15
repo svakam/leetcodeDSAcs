@@ -1,0 +1,8 @@
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\leetcodeDSAcs\bin\Debug\netstandard2.0\leetcodeDSAcs.deps.json
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\leetcodeDSAcs\bin\Debug\netstandard2.0\leetcodeDSAcs.dll
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\leetcodeDSAcs\bin\Debug\netstandard2.0\leetcodeDSAcs.pdb
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\leetcodeDSAcs\obj\Debug\netstandard2.0\leetcodeDSAcs.AssemblyInfoInputs.cache
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\leetcodeDSAcs\obj\Debug\netstandard2.0\leetcodeDSAcs.AssemblyInfo.cs
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\leetcodeDSAcs\obj\Debug\netstandard2.0\leetcodeDSAcs.csproj.CoreCompileInputs.cache
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\leetcodeDSAcs\obj\Debug\netstandard2.0\leetcodeDSAcs.dll
+C:\Users\v-akams\Development\leetcodeDSA\leetcodeDSAcs\leetcodeDSAcs\obj\Debug\netstandard2.0\leetcodeDSAcs.pdb
