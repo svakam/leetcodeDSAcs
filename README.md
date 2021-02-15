@@ -1,10 +1,3 @@
 # LeetCode DSA
 
-## Easy
-### Valid Parentheses
-### Palindrome Number
-### Roman To Integer
-### Reverse Integer
-
-## Medium
-### Valid SubArrays
+Contains a library of leetcode problems and a .NET Core Console App (in progress) to run problems. 
