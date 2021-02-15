@@ -7,9 +7,14 @@ namespace RunConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Leetcode problems!");
-            Console.WriteLine("Choose a problem to run by difficulty, data structure type, or directly by problem name: ");
-            Console.WriteLine("If by difficulty, type \"df\"; if by data structure, type \"ds\"; if by problem type, type \"p\". Then press Enter: ");
+            bool firstTime = true;
+            if (firstTime) Console.WriteLine("Leetcode problems!");
+            Console.WriteLine("Choose a problem to run by difficulty, data structure type, or directly by problem name. Then press Enter: ");
+            Console.WriteLine("Difficulty -- \"df\"");
+            Console.WriteLine("Data structure -- \"ds\"");
+            Console.WriteLine("Problem name -- \"p\"");
+            Console.WriteLine("Random problem -- \"r\"");
+            Console.WriteLine("Exit -- \"e\"");
             switch (Console.ReadLine())
             {
                 case "df":
@@ -24,15 +29,21 @@ namespace RunConsole
                 case "r":
                     ChooseRandom(args);
                     break;
+                case "e":
+                    return;
                 default:
                     Console.WriteLine("Try again. ");
-                    return;
+                    Main(args);
+                    break;
             }
         }
 
         public static void ChooseByDifficulty(string[] args)
         {
-            Console.WriteLine("Choose by difficulty: Easy (e) or Medium (m)");
+            Console.WriteLine("Choose by difficulty:");
+            Console.WriteLine("Easy -- \"e\""); 
+            Console.WriteLine("Medium -- \"m\"");
+            Console.WriteLine("(Go back -- \"b\")");
             switch (Console.ReadLine())
             {
                 case "e":
@@ -41,9 +52,13 @@ namespace RunConsole
                 case "m":
                     Console.WriteLine("Choose a problem by data structure, problem name, or random problem: ");
                     break;
+                case "b":
+                    Main(args);
+                    break;
                 default:
                     Console.WriteLine("Try again. ");
-                    return;
+                    ChooseByDifficulty(args);
+                    break;
             }
         }
 
