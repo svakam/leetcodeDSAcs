@@ -34,12 +34,12 @@ namespace leetcodeDSAcs.Easy.Strings
                         else
                         {
                             sb.Append('o');
-                            i++;
+                            i++; // need to be careful about cursor
                         }
                         break;
                     default:
                         Console.WriteLine("Did not land on an appropriate char. Exit");
-                        return sb.ToString();
+                        return null;
                 }
             }
             return sb.ToString();
