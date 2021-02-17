@@ -22,7 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
+          "https://msazure.pkgs.visualstudio.com/DefaultCollection/_apis/packaging/Official/nuget/index.json": {},
           "https://msazure.pkgs.visualstudio.com/_packaging/Official/nuget/v3/index.json": {},
           "https://msazure.pkgs.visualstudio.com/_packaging/synthetics/nuget/v3/index.json": {},
           "https://msblox.pkgs.visualstudio.com/_packaging/AzureGenevaMonitoring/nuget/v3/index.json": {},
@@ -85,7 +85,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
+          "https://msazure.pkgs.visualstudio.com/DefaultCollection/_apis/packaging/Official/nuget/index.json": {},
           "https://msazure.pkgs.visualstudio.com/_packaging/Official/nuget/v3/index.json": {},
           "https://msazure.pkgs.visualstudio.com/_packaging/synthetics/nuget/v3/index.json": {},
           "https://msblox.pkgs.visualstudio.com/_packaging/AzureGenevaMonitoring/nuget/v3/index.json": {},

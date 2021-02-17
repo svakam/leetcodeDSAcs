@@ -44,6 +44,7 @@ namespace RunConsole
             Console.WriteLine("Easy -- \"e\""); 
             Console.WriteLine("Medium -- \"m\"");
             Console.WriteLine("(Go back -- \"b\")");
+            Console.WriteLine("(Exit -- \"b\")");
             switch (Console.ReadLine())
             {
                 case "e":
