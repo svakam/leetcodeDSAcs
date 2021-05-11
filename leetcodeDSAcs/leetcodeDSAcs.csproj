@@ -8,7 +8,6 @@
     <Folder Include="Medium\HashTables\" />
     <Folder Include="Medium\Modulo\" />
     <Folder Include="Medium\LinkedLists\" />
-    <Folder Include="Medium\Strings\" />
   </ItemGroup>
 
 </Project>
