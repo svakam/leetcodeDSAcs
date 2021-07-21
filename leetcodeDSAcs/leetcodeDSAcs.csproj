@@ -5,9 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Medium\HashTables\" />
-    <Folder Include="Medium\Modulo\" />
-    <Folder Include="Medium\LinkedLists\" />
+    <Compile Remove="Medium\HashTables\**" />
+    <Compile Remove="Medium\LinkedLists\**" />
+    <Compile Remove="Medium\Modulo\**" />
+    <EmbeddedResource Remove="Medium\HashTables\**" />
+    <EmbeddedResource Remove="Medium\LinkedLists\**" />
+    <EmbeddedResource Remove="Medium\Modulo\**" />
+    <None Remove="Medium\HashTables\**" />
+    <None Remove="Medium\LinkedLists\**" />
+    <None Remove="Medium\Modulo\**" />
   </ItemGroup>
 
 </Project>
