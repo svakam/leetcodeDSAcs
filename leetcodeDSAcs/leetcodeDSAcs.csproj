@@ -16,4 +16,8 @@
     <None Remove="Medium\Modulo\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Easy\LinkedList\" />
+  </ItemGroup>
+
 </Project>
