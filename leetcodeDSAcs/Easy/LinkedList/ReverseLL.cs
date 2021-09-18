@@ -4,6 +4,10 @@ using System.Text;
 
 namespace leetcodeDSAcs.Easy.LinkedList
 {
+    // find repeatable pattern
+    // run through algo fast, reorganize steps along the way and test
+    // run from back to front (move in order of tracer to runner since it's a singly LL)
+    // while condition should include a condition that breaks whatever is in the while loop at the correct point
     public class ListNode
     {
         public int val;
