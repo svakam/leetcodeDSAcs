@@ -1,7 +1,6 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.IO;
-///*
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 
 //A Ticket has a Source and a Destination
 
@@ -16,70 +15,69 @@
 
 //[{src: "SEA", dest: "BULG"}, {src: "BULG": dest: "DUBAI"}, {src: "SEA", dest: "SLC"}, {src: "SLC", dest: "LAX"}, {src: "SEA", dest: "SLC"}, {src: "SLC", dest: "SEA"}]
 
-//src: SEA
-//dest: BULG
+//Write a function which takes a Source, Destination, an Array of Tickets, and an integer k, and returns a boolean indicating if it is possible to reach the Destination from the
+//Source using exactly k Tickets in the array
 
-//src: BULG
-//dest: DUBAI
-//k = 2
+// example input: src: SLC, dest: DUBAI, k = 3 --> true
+// example input: src: SEA, dest: LAX, k = 4 --> true
+// example input: src: SEA, dest: SLC, k = 3 --> false
 
-//// reset starting
-//src: SEA
-//dest: SLC
+namespace leetcodeDSAcs.Medium.ArraysStrings
+{
+    public class TicketsDestinationInK
+    {
+        public static bool Run(string src, string dest, Ticket[] list, int k)
+        {
+            List<int> positionsOfTicketsWithInputSrc = new List<int>();
+            bool ticketExistsWithInputSrc = false;
+            for (int i = 0; i < list.Length; i++)
+            { 
+                if (list[i].src == src)
+                {
+                    ticketExistsWithInputSrc = true;
+                    positionsOfTicketsWithInputSrc.Add(i);
+                }
+            }
+            if (!ticketExistsWithInputSrc) return false;
 
-//Write a function which takes a Source, Destination, an Array of Tickets, and an integer k, and returns a boolean indicating if it is possible to reach the Destination from the Source using exactly k Tickets in the array.
-//*/
+            if (k == 1)
+            {
+                for (int i = 0; i < positionsOfTicketsWithInputSrc.Count; i++)
+                {
+                    if (list[positionsOfTicketsWithInputSrc[i]].dest == dest) return true;
+                }
+            }
 
-//public class Ticket
-//{
-//    public string Src { get; set; }
-//    public string Dest { get; set; }
-//}
+            HashSet<int> ticketIndicesLookedAt = new HashSet<int>();
 
-//public class CurrentLocAndFlights
-//{
-//    public string CurrentSrc { get; set; }
-//    public string CurrentDest { get; set; }
-//    public int NumTimesFlown { get; set; }
-//}
+            int counter = 1; // if this ever exceeds k or _____, return false
+            for (int i = 0; i < positionsOfTicketsWithInputSrc.Count; i++)
+            {
+                ticketIndicesLookedAt.Add(positionsOfTicketsWithInputSrc[i]); // add this index immediately 
+                Ticket ticketInListBeingLookedAt = list[positionsOfTicketsWithInputSrc[i]];
+                for (int j = 0; j < list.Length; j++)
+                {
+                    if (list[j].src == ticketInListBeingLookedAt.dest && ticketIndicesLookedAt.Contains(j))
+                    {
+                        counter++;
+                        ticketInListBeingLookedAt = list[j];
+                    }
+                }
+            }
 
-//class Solution
-//{
-//    bool[] StartingTicketsViewed { get; set; } // tracker for possibilities of starting tickets; false if not tried yet, true if tried
+        }
+    }
 
-//    // wrapper function to take in ticket list, src/dest, and requested number of flights
-//    public bool IsPossibleToFlyByK(string src, string dest, Ticket[] tickets, int k)
-//    {
-//        CurrentLocAndFlights c = new CurrentLocAndFlights()
-//        {
-//            NumTimesFlown = 0
-//        };
-//        return CheckReachDestination(src, dest, tickets, k, c);
-//    }
+    public class Ticket
+    {
+        public string src;
+        public string dest;
+        public Ticket(string src, string dest)
+        {
+            this.src = src;
+            this.dest = dest;
+        }
+    }
+}
 
-//    // run through ticket list and get counter going on number of times flown
-//        // if number of times flown exceeds k, try again with new starting ticket
-//        // if number of times flown meets k and match on destination, return true
-//    // if no starting ticket, return false
-//    public bool CheckReachDestination(string src, string dest, Ticket[] tickets, int k, CurrentLocAndFlights c)
-//    {
-//        // if starting ticket is available, set the starting ticket
-//        for (int i = 0; i < tickets.Length; i++)
-//        {
-//            // if ticket source match and never seen before, set current location; if destination and number of flights matched, return true
-//            if (tickets[i].Src == src && StartingTicketsViewed[i] == false)
-//            {
-//                StartingTicketsViewed[i] = true;
-//                c.CurrentSrc = tickets[i].Src;
-//                c.CurrentDest = tickets[i].Dest;
 
-//                if (c.CurrentDest == dest) return true;
-//                else
-//                {
-//                    return CheckReachDestination(src, dest, tickets, k, c);
-//                }
-//            }
-//            else return false; // no source match, or all possible tickets looked at
-//        }
-//    }
-//}
