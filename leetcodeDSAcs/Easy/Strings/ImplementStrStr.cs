@@ -42,7 +42,7 @@ namespace leetcodeDSAcs.Easy.Strings
             return true;
         }
 
-        public int StrStrAlternative(string haystack, string needle)
+        public void StrStrAlternative(string haystack, string needle)
         {
             // https://leetcode.com/problems/implement-strstr/discuss/1066884/c-kmp
             // https://leetcode.com/problems/implement-strstr/discuss/402189/C-Substring-Solution

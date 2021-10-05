@@ -51,19 +51,32 @@ namespace leetcodeDSAcs.Medium.ArraysStrings
             HashSet<int> ticketIndicesLookedAt = new HashSet<int>();
 
             int counter = 1; // if this ever exceeds k or _____, return false
-            for (int i = 0; i < positionsOfTicketsWithInputSrc.Count; i++)
+            Ticket ticketInListBeingLookedAt = list[positionsOfTicketsWithInputSrc[0]];
+            while (counter <= k)
             {
-                ticketIndicesLookedAt.Add(positionsOfTicketsWithInputSrc[i]); // add this index immediately 
-                Ticket ticketInListBeingLookedAt = list[positionsOfTicketsWithInputSrc[i]];
-                for (int j = 0; j < list.Length; j++)
+                if (counter == k && ticketInListBeingLookedAt.dest == dest)
                 {
-                    if (list[j].src == ticketInListBeingLookedAt.dest && ticketIndicesLookedAt.Contains(j))
+                    return true;
+                }
+                for (int i = 0; i < positionsOfTicketsWithInputSrc.Count; i++)
+                {
+                    ticketIndicesLookedAt.Add(positionsOfTicketsWithInputSrc[i]); // add this index immediately 
+                    ticketInListBeingLookedAt = list[positionsOfTicketsWithInputSrc[i]];
+                    for (int j = 0; j < list.Length; j++)
                     {
-                        counter++;
-                        ticketInListBeingLookedAt = list[j];
+                        if (list[j].src == ticketInListBeingLookedAt.dest && !ticketIndicesLookedAt.Contains(j))
+                        {
+                            counter++;
+                            ticketInListBeingLookedAt = list[j];
+                        }
+                        else
+                        {
+                            return false;
+                        }
                     }
                 }
-            }
+             }
+            return false;
 
         }
     }

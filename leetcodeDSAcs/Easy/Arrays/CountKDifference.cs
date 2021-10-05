@@ -35,7 +35,7 @@ namespace leetcodeDSAcs.Easy.Arrays
 
             for (int i = 0; i < nums.Length; i++)
             {
-                if (!freq.TryAdd(nums[i], 1)) freq[nums[i]]++;
+                //if (!freq.TryAdd(nums[i], 1)) freq[nums[i]]++;
             }
 
             int count = 0;
