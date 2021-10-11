@@ -60,14 +60,19 @@ namespace leetcodeDSAcs.Medium.ArraysStrings
                 }
                 for (int i = 0; i < positionsOfTicketsWithInputSrc.Count; i++)
                 {
-                    ticketIndicesLookedAt.Add(positionsOfTicketsWithInputSrc[i]); // add this index immediately 
                     ticketInListBeingLookedAt = list[positionsOfTicketsWithInputSrc[i]];
                     for (int j = 0; j < list.Length; j++)
                     {
-                        if (list[j].src == ticketInListBeingLookedAt.dest && !ticketIndicesLookedAt.Contains(j))
+                        if (list[j].src == ticketInListBeingLookedAt.dest)
                         {
-                            counter++;
-                            ticketInListBeingLookedAt = list[j];
+                            if (!ticketIndicesLookedAt.Contains(j))
+                            {
+                                counter++;
+                                Console.WriteLine(counter);
+                                ticketInListBeingLookedAt = list[j];
+                                ticketIndicesLookedAt.Add(j); // add this index immediately
+                                Console.WriteLine(j);
+                            }
                         }
                         else
                         {
