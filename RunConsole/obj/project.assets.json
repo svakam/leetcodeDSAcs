@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vikra\\Development\\leetcodeDSAcs\\RunConsole\\RunConsole.csproj",
+      "projectUniqueName": "C:\\Users\\vikra\\Development\\Repos\\GitHub\\leetcodeDSAcs\\RunConsole\\RunConsole.csproj",
       "projectName": "RunConsole",
-      "projectPath": "C:\\Users\\vikra\\Development\\leetcodeDSAcs\\RunConsole\\RunConsole.csproj",
+      "projectPath": "C:\\Users\\vikra\\Development\\Repos\\GitHub\\leetcodeDSAcs\\RunConsole\\RunConsole.csproj",
       "packagesPath": "C:\\Users\\vikra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vikra\\Development\\leetcodeDSAcs\\RunConsole\\obj\\",
+      "outputPath": "C:\\Users\\vikra\\Development\\Repos\\GitHub\\leetcodeDSAcs\\RunConsole\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vikra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\vikra\\Development\\leetcodeDSAcs\\leetcodeDSAcs\\leetcodeDSAcs.csproj": {
-              "projectPath": "C:\\Users\\vikra\\Development\\leetcodeDSAcs\\leetcodeDSAcs\\leetcodeDSAcs.csproj"
+            "C:\\Users\\vikra\\Development\\Repos\\GitHub\\leetcodeDSAcs\\leetcodeDSAcs\\leetcodeDSAcs.csproj": {
+              "projectPath": "C:\\Users\\vikra\\Development\\Repos\\GitHub\\leetcodeDSAcs\\leetcodeDSAcs\\leetcodeDSAcs.csproj"
             }
           }
         }
@@ -78,12 +78,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[3.1.27, 3.1.27]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

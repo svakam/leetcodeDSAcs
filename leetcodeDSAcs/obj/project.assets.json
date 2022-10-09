@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vikra\\Development\\leetcodeDSAcs\\leetcodeDSAcs\\leetcodeDSAcs.csproj",
+      "projectUniqueName": "C:\\Users\\vikra\\Development\\Repos\\GitHub\\leetcodeDSAcs\\leetcodeDSAcs\\leetcodeDSAcs.csproj",
       "projectName": "leetcodeDSAcs",
-      "projectPath": "C:\\Users\\vikra\\Development\\leetcodeDSAcs\\leetcodeDSAcs\\leetcodeDSAcs.csproj",
+      "projectPath": "C:\\Users\\vikra\\Development\\Repos\\GitHub\\leetcodeDSAcs\\leetcodeDSAcs\\leetcodeDSAcs.csproj",
       "packagesPath": "C:\\Users\\vikra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vikra\\Development\\leetcodeDSAcs\\leetcodeDSAcs\\obj\\",
+      "outputPath": "C:\\Users\\vikra\\Development\\Repos\\GitHub\\leetcodeDSAcs\\leetcodeDSAcs\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\vikra\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -235,7 +235,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

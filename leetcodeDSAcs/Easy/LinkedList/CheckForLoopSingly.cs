@@ -1,18 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using leetcodeDSAcs.Data_Structures;
 
 namespace leetcodeDSAcs.Easy.LinkedList
 {
     public class CheckForLoopSingly
     {
-        public bool IsListALoop(ListNode head)
+        public bool IsListALoop(Node head)
         {
             if (head == null) return false;
-            if (head.next == head) return true;
+            if (head.Next == head) return true;
 
-            ListNode curr = head;
-            ListNode runner = head;
+            Node curr = head;
+            Node runner = head;
 
             while (runner != null)
             {
@@ -20,8 +21,8 @@ namespace leetcodeDSAcs.Easy.LinkedList
                 {
                     return true;
                 }
-                curr = curr.next;
-                runner = runner.next.next; // Floyd's Cycle-Finding Algorithm: runner goes twice the speed of curr and WILL meet curr if LL has a loop
+                curr = curr.Next;
+                runner = runner.Next.Next; // Floyd's Cycle-Finding Algorithm: runner goes twice the speed of curr and WILL meet curr if LL has a loop
             }
             return false;
         }
