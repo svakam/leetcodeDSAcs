@@ -20,8 +20,9 @@ namespace leetcodeDSAcs.Easy.Strings
                 return;
             }
 
-            Run(str.Substring(1, str.Length), subseq + str[0]); // include the char
-            Run(str.Substring(1, str.Length), subseq); // exclude the char
+            Console.WriteLine(str.Substring(1, str.Length - 1));
+            Run(str.Substring(1, str.Length - 1), subseq + str[0]); // include the char
+            Run(str.Substring(1, str.Length - 1), subseq); // exclude the char
         }
     }
 }
