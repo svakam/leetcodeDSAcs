@@ -9,9 +9,54 @@ namespace leetcodeDSAcs.Medium.Arrays
         // return clockwise spiral
         public IList<int> Run(int[][] matrix)
         {
-            int row = 0, col = 0, lb = 0, tb = 0, rb = matrix[0].Length - 1, bb = matrix.Length - 1;
+            List<int> output = new List<int>();
+            int row = 0, col = 0, lb = -, tb = -1, rb = matrix[0].Length, bb = matrix.Length;
 
+            bool withinBoundaries = true;
+            while (withinBoundaries)
+            {
+                // move right
+                if (col == rb) withinBoundaries = false;
+                while (withinBoundaries && col < rb)
+                {
+                    output.Add(matrix[row][col]);
+                    col++;
+                }
+                row++;
+                rb--;
 
+                // move down
+                if (row == bb) withinBoundaries = false;
+                while (withinBoundaries && row < rb)
+                {
+                    output.Add(matrix[row][col]);
+                    row++;
+                }
+                col--;
+                bb--;
+
+                // move left
+                if (col == lb) withinBoundaries = false;
+                while (withinBoundaries && col > lb)
+                {
+                    output.Add(matrix[row][col]);
+                    col--;
+                }
+                row--;
+                lb++;
+
+                // move up
+                if (row == tb) withinBoundaries = false;
+                while (withinBoundaries && col > lb)
+                {
+                    output.Add(matrix[row][col]);
+                    row--;
+                }
+                col++;
+                tb++;
+            }
+
+            return output;
         }
     }
 }
@@ -26,7 +71,7 @@ namespace leetcodeDSAcs.Medium.Arrays
 //  [6,7,8,9,1],
 //  [2,3,4,5,6]] -> [1,2,3,4,5,1,6,5,4,3,2,6,7,8,9,1]
 
-// while curr element still has room to move, i.e. when switches direction, does not cross a boundary
+// while curr element still has room to move (i.e. when switches direction, does not cross a boundary)
 // 1. j++ until right boundary rb
 // 2. tb++
 // 3. i++ until bottom boundary bb
