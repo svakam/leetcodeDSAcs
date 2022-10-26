@@ -10,7 +10,7 @@ namespace leetcodeDSAcs.Medium.Arrays
         public IList<int> Run(int[][] matrix)
         {
             List<int> output = new List<int>();
-            int row = 0, col = 0, lb = -, tb = -1, rb = matrix[0].Length, bb = matrix.Length;
+            int row = 0, col = 0, lb = -1, tb = -1, rb = matrix[0].Length, bb = matrix.Length;
 
             bool withinBoundaries = true;
             while (withinBoundaries)
