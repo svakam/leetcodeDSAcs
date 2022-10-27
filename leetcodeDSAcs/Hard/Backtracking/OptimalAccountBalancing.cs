@@ -10,14 +10,52 @@ namespace leetcodeDSAcs.Hard.Backtracking
     {
         public int MinTransfers(int[][] transactions)
         {
-            // build balances across ids via transactions
+            // build balances across ids via transactions // e.g. [1,2,5]
+            // e.g. 
+            // {
+                 // 0, -4
+                 // 1, 4
+                 // 2, 0
+            // }
+            Dictionary<int, int> balances = BuildBalances(transactions);
+            
+
+        }
+
+        private Dictionary<int, int> BuildBalances(int[][] transactions)
+        {
             Dictionary<int, int> balances = new Dictionary<int, int>();
             for (int i = 0; i < transactions.Length; i++)
             {
-                
+                // update beneficiary balance
+                if (!balances.ContainsKey(transactions[i][0]))
+                {
+                    balances.Add(transactions[i][0], 0 - transactions[i][2]);
+                }
+                else
+                {
+                    balances[transactions[i][0]] -= transactions[i][2];
+                }
+
+                // update recipient balance
+                if (!balances.ContainsKey(transactions[i][1]))
+                {
+                    balances.Add(transactions[i][1], transactions[i][2]);
+                }
+                else
+                {
+                    balances[transactions[i][1]] += transactions[i][2];
+                }
             }
 
-            // reiterate 
+            Console.WriteLine("Balances: " + balances.Count);
+            foreach (var key in balances.Keys)
+            {
+                Console.WriteLine("key: " + key);
+                Console.WriteLine("value: " + balances[key]);
+            }
+
+            return balances;
         }
     }
 }
