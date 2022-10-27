@@ -6,56 +6,81 @@ namespace leetcodeDSAcs.Hard.Backtracking
 {
     // given array of transactions where transactions[i] = [from^i, to^i, amount^i],
     // return minimum # transactions required to settle the debt (nobody owes others)
-    public class OptimalAccountBalancing
-    {
-        public int MinTransfers(int[][] transactions)
-        {
-            // build balances across ids via transactions // e.g. [1,2,5]
-            // e.g. 
-            // {
-                 // 0, -4
-                 // 1, 4
-                 // 2, 0
-            // }
-            Dictionary<int, int> balances = BuildBalances(transactions);
-            
 
+    public class LeetcodeSolution
+    {
+        public int Run(int[][] transactions)
+        {
+            int[] debt = BuildDebtArray(transactions);
+
+            return GetMinTransfersAfter(0, debt);
         }
 
-        private Dictionary<int, int> BuildBalances(int[][] transactions)
+        private int GetMinTransfersAfter(int curId, int[] debt)
         {
-            Dictionary<int, int> balances = new Dictionary<int, int>();
-            for (int i = 0; i < transactions.Length; i++)
+            // if debt of this person is 0, move on
+            while (curId < debt.Length && debt[curId] == 0)
             {
-                // update beneficiary balance
-                if (!balances.ContainsKey(transactions[i][0]))
-                {
-                    balances.Add(transactions[i][0], 0 - transactions[i][2]);
-                }
-                else
-                {
-                    balances[transactions[i][0]] -= transactions[i][2];
-                }
+                curId++;
+            }
 
-                // update recipient balance
-                if (!balances.ContainsKey(transactions[i][1]))
+            // if reached end of array, return 0
+            if (curId == debt.Length)
+            {
+                return 0;
+            }
+
+            int minTransactions = int.MaxValue;
+            for (int i = curId + 1; i < debt.Length; i++)
+            {
+                if (debt[i] * debt[curId] < 0) // if the product is negative, there is potential for transfer from currId to next id (i)
                 {
-                    balances.Add(transactions[i][1], transactions[i][2]);
-                }
-                else
-                {
-                    balances[transactions[i][1]] += transactions[i][2];
+                    debt[i] += debt[curId]; // transfer from currId to next id (i)
+                    minTransactions = Math.Min(minTransactions, GetMinTransfersAfter(curId + 1, debt) + 1);
+                    debt[i] -= debt[curId];
                 }
             }
 
-            Console.WriteLine("Balances: " + balances.Count);
-            foreach (var key in balances.Keys)
+            return minTransactions;
+        }
+
+        private int[] BuildDebtArray(int[][] transactions)
+        {
+            Dictionary<int, int> debtMap = new Dictionary<int, int>();
+            foreach (int[] transaction in transactions)
             {
-                Console.WriteLine("key: " + key);
-                Console.WriteLine("value: " + balances[key]);
+                int donor = transaction[0];
+                int recipient = transaction[1];
+                int amount = transaction[2];
+
+                if (!debtMap.ContainsKey(donor))
+                {
+                    debtMap.Add(donor, amount);
+                }
+                else
+                {
+                    debtMap[donor] += amount;
+                }
+
+                if (!debtMap.ContainsKey(recipient))
+                {
+                    debtMap.Add(recipient, amount * -1);
+                }
+                else
+                {
+                    debtMap[recipient] -= amount;
+                }
             }
 
-            return balances;
+            int[] debt = new int[debtMap.Count];
+            int i = 0;
+            foreach (int amount in debtMap.Values)
+            {
+                debt[i++] = amount;
+            }
+
+            return debt;
+            
         }
     }
 }
@@ -84,52 +109,3 @@ namespace leetcodeDSAcs.Hard.Backtracking
 // 4 = $-1
 // 5 = $1
 
-//   public int minTransfers(int[][] transactions) {
-//int[] debt = buildDebtArray(transactions); // Debt amount to balance for each person.
-
-//return getMinTransfersAfter(0, debt);
-//    }
-    
-//    private int getMinTransfersAfter(int curId, int[] debt)
-//{
-//    while (curId < debt.length && debt[curId] == 0)
-//        curId++;
-//    // Base case.
-//    if (curId == debt.length)
-//        return 0;
-//    // Recursive case.
-//    int minTransactions = Integer.MAX_VALUE;
-//    for (int i = curId + 1; i < debt.length; i++)
-//    {
-//        if (debt[i] * debt[curId] < 0)
-//        {
-//            debt[i] += debt[curId];
-//            minTransactions = Math.min(minTransactions, getMinTransfersAfter(curId + 1, debt) + 1);
-//            debt[i] -= debt[curId];
-//        }
-//    }
-
-//    return minTransactions;
-//}
-
-//private int[] buildDebtArray(int[][] transactions)
-//{
-//    Map<Integer, Integer> debtMap = new HashMap<>(); // Map person ID to debt amount.
-
-//    for (int[] transaction : transactions) {
-//    int giver = transaction[0];
-//    int taker = transaction[1];
-//    int amount = transaction[2];
-//    debtMap.put(giver, debtMap.getOrDefault(giver, 0) + amount);
-//    debtMap.put(taker, debtMap.getOrDefault(taker, 0) - amount);
-//}
-
-//int[] debt = new int[debtMap.size()];
-//int i = 0;
-//for (int amount : debtMap.values())
-//{
-//    debt[i++] = amount;
-//}
-
-//return debt;
-//    }
