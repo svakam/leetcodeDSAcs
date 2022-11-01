@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4SLbkBGulSTapZJGbUCxHdET38qmR+k2laweL2cj3qeGd5hCaocvv4RdXTGr1xaYceKUQ9kwHaO+aU1wmHSHdQ==",
+  "dgSpecHash": "3PWxuw5e58F6oowtgd6tOVIAbmH7XkgLvFcBmTWr1Jl6BnBfCvvO4jlsic5/hofXzSxlWAGqpzMWF/mgyyFYhg==",
   "success": true,
   "projectFilePath": "C:\\Users\\vikra\\Development\\Repos\\GitHub\\leetcodeDSAcs\\RunConsole\\RunConsole.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\vikra\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.27\\microsoft.netcore.app.host.win-x64.3.1.27.nupkg.sha512",
-    "C:\\Users\\vikra\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\vikra\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\vikra\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
