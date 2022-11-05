@@ -50,23 +50,6 @@ namespace leetcodeDSAcs.Medium.Recursion
             //};
         }
 
-        private static object Recurse(string digits, int i, Dictionary<char, char[]> letters)
-        {
-            object downstreamResults;
-            object currResults;
-            if (i == digits.Length)
-            {
-                downstreamResults = letters[digits[i]];
-                currResults = downstreamResults;
-            }
-            else
-            {
-                downstreamResults = Recurse(digits, i++, letters);
-                object charLetterArray = letters[digits[i]];
-                currResults = new List<string>();
-                // iterate over downstream results per curr result and combine letters and return overall result list
-            }
-        }
     }
 }
 
