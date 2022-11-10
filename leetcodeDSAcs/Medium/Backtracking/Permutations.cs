@@ -8,10 +8,16 @@ namespace leetcodeDSAcs.Medium.Backtracking
     {
         public int[][] Run(int[] nums)
         {
-            
+            for ()
         }
     }
 }
 
 // [1,2,3]
 // -> [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+
+// take index of first integer to consider as argument of backtrack(first)
+// if first integer to consider has index n, current permutation is done
+// iterate over integers from first to n - 1
+    // place ith integer first in permutation - swap(first, nums[i])
+    // proceed to create all permutations 
