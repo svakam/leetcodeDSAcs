@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using leetcodeDSAcs.Data_Structures;
 
 namespace leetcodeDSAcs.Medium.Trees
 {
@@ -14,27 +15,20 @@ namespace leetcodeDSAcs.Medium.Trees
 
             // look at current node:
             if (currentClo == null) return null;
-            Console.WriteLine(currentClo.val);
-            if (currentClo.val == target.val) return currentClo;
+            Console.WriteLine(currentClo.Val);
+            if (currentClo.Val == target.Val) return currentClo;
 
             else
             {
                 // go to left node
-                result = GetTargetCopy(original, currentClo.left, target);
+                result = GetTargetCopy(original, currentClo.Left, target);
                 if (result != null) return result;
 
                 // go to right node
-                result = GetTargetCopy(original, currentClo.right, target);
+                result = GetTargetCopy(original, currentClo.Right, target);
                 if (result != null) return result;
             }
             return null;
         }
-    }
-
-    class TreeNode
-    {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
     }
 }
